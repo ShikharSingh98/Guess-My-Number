@@ -10,12 +10,23 @@
   <body>
     <header class="header">
       <div class="header-content">
-        <button class="btn-again">Play Again!</button>
+        <button class="btn again">Play Again!</button>
         <p>Number is between 1 and 20</p>
       </div>
       <h1>Guess My Number!</h1>
       <span class="number">?</span>
     </header>
+    <main>
+      <section class="left">
+        <input type="number" class="guess-number" />
+        <button class="btn check">Check!</button>
+      </section>
+      <section class="right">
+        <p>Start guessing . . .</p>
+        <p>💯 Score: <span class="score">20</span></p>
+        <p>🏅 High Score: <span class="high-score">0</span></p>
+      </section>
+    </main>
     <script src="./app.js"></script>
   </body>
 </html>

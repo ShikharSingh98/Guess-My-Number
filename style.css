@@ -26,16 +26,19 @@ body {
   align-items: center;
 }
 
-.btn-again {
+.btn {
   border: none;
   outline: none;
   cursor: pointer;
   font-family: 'Bebas Neue', cursive;
-  font-size: 2rem;
-  border-radius: 10px;
   background-color: #fca311;
   color: white;
+}
+
+.again {
+  font-size: 2rem;
   padding: 0.7rem 1rem;
+  border-radius: 10px;
 }
 
 .header-content p {
@@ -55,4 +58,53 @@ body {
   font-size: 3.5rem;
   padding: 1rem 4rem;
   border-radius: 10px;
+}
+
+main {
+  width: 90%;
+  margin: 0rem auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.guess-number {
+  text-align: center;
+  width: 130px;
+  height: 80px;
+  background-color: #000000;
+  border: 3px solid white;
+  border-radius: 10px;
+  color: white;
+  font-size: 4rem;
+  outline: none;
+}
+
+.check {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  padding: 0.3rem 1rem;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+}
+
+.right p {
+  margin: 0.5rem 0;
+  font-size: 1.8rem;
+}
+
+.right p:first-child {
+  font-size: 3rem;
+}
+
+.right p span {
+  margin-left: 1.5rem;
 }
