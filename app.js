@@ -10,14 +10,18 @@ let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let playerScore = 20;
 let highScore = 0;
 
+function displayMessage(messageText) {
+  message.textContent = messageText;
+}
+
 checkButton.addEventListener('click', function () {
   const guess = Number(guessNumber.value);
 
   if (!guess) {
-    message.textContent = '⛔ No Number!';
+    displayMessage('⛔ No Number!');
   } else {
     if (guess === secretNumber) {
-      message.textContent = '🎉 Correct Number!';
+      displayMessage('🎉 Correct Number!');
       number.textContent = secretNumber;
       document.body.style.backgroundColor = '#1c8f3d';
       if (playerScore > highScore) {
@@ -25,16 +29,12 @@ checkButton.addEventListener('click', function () {
         topScore.textContent = highScore;
       }
     } else {
-      if (guess < secretNumber) {
-        message.textContent = '🔻 Too Low!';
-      } else {
-        message.textContent = '🔼 Too High!';
-      }
+      displayMessage(guess > secretNumber ? '🔼 Too High!' : '🔻 Too Low!');
       playerScore = playerScore - 1;
       if (playerScore > 0) {
         score.textContent = playerScore;
       } else {
-        message.textContent = '😯 Sorry you lost the game!';
+        displayMessage('😯 Sorry you lost the game!');
         score.textContent = 0;
       }
     }
@@ -43,7 +43,7 @@ checkButton.addEventListener('click', function () {
 
 againButton.addEventListener('click', function () {
   secretNumber = Math.trunc(Math.random() * 20) + 1;
-  message.textContent = 'Start guessing . . .';
+  displayMessage('Start guessing . . .');
   playerScore = 20;
   score.textContent = playerScore;
   guessNumber.value = '';
