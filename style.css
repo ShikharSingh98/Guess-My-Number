@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #000000;
+  background-color: #5461b1;
   color: white;
   font-family: 'Bebas Neue', cursive;
 }
@@ -31,7 +30,7 @@ body {
   outline: none;
   cursor: pointer;
   font-family: 'Bebas Neue', cursive;
-  background-color: #fca311;
+  background-color: #f1713a;
   color: white;
 }
 
@@ -42,8 +41,8 @@ body {
 }
 
 .header-content p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
 }
 
 .header h1 {
@@ -54,7 +53,7 @@ body {
 
 .number {
   background-color: white;
-  color: #000000;
+  color: #f1713a;
   font-size: 3.5rem;
   padding: 1rem 4rem;
   border-radius: 10px;
@@ -76,10 +75,8 @@ main {
   text-align: center;
   width: 130px;
   height: 80px;
-  background-color: #000000;
-  border: 3px solid white;
+  border: none;
   border-radius: 10px;
-  color: white;
   font-size: 4rem;
   outline: none;
 }
@@ -101,8 +98,9 @@ main {
   font-size: 1.8rem;
 }
 
-.right p:first-child {
-  font-size: 3rem;
+.right .message {
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem;
 }
 
 .right p span {
